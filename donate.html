@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Eagle Rock Ministries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #B8860B; --gold-light: #D4A84B; --cream: #FDF8F0; --cream-dark: #F5EDE0; --navy: #1C2A4A; --navy-light: #2D3E5F; --burgundy: #722F37; --text: #3A3A3A; --text-light: #666666; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: Lato, sans-serif; background-color: var(--cream); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+        nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(28, 42, 74, 0.97); backdrop-filter: blur(10px); z-index: 1000; padding: 0 2rem; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo-img { height: 45px; width: auto; }
+        .logo-text { font-family: Cormorant Garamond, serif; font-size: 1.3rem; font-weight: 600; color: #D4A84B; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links a:hover, .nav-links a.active { color: #D4A84B; }
+        .mobile-menu { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+        .mobile-menu span { width: 25px; height: 2px; background: white; }
+        .page-header { padding: 10rem 2rem 5rem; background: linear-gradient(135deg, #1C2A4A 0%, #2D3E5F 50%, #722F37 100%); text-align: center; }
+        .page-header h1 { font-family: Cormorant Garamond, serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 500; color: white; }
+        .page-header h1 span { color: #D4A84B; }
+        .page-header p { font-family: Cormorant Garamond, serif; font-size: 1.2rem; font-style: italic; color: rgba(255, 255, 255, 0.8); margin-top: 1rem; }
+        section { padding: 5rem 2rem; }
+        .section-container { max-width: 1100px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label { font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; color: #B8860B; margin-bottom: 1rem; font-weight: 500; }
+        .section-title { font-family: Cormorant Garamond, serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 500; color: #1C2A4A; line-height: 1.3; }
+        .divider { width: 60px; height: 2px; background: linear-gradient(90deg, #B8860B, #D4A84B); margin: 1.5rem auto 0; }
+        .btn { display: inline-block; background: linear-gradient(135deg, #B8860B 0%, #D4A84B 100%); color: white; padding: 1rem 2.5rem; text-decoration: none; font-size: 0.85rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(184, 134, 11, 0.3); border: none; cursor: pointer; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(184, 134, 11, 0.4); }
+        .btn-outline { background: transparent; border: 2px solid #B8860B; color: #B8860B; box-shadow: none; }
+        .btn-outline:hover { background: #B8860B; color: white; }
+        footer { background: #141E33; padding: 2rem; text-align: center; }
+        .footer-logo { font-family: Cormorant Garamond, serif; font-size: 1.3rem; color: #D4A84B; margin-bottom: 1rem; }
+        .footer-verse { font-family: Cormorant Garamond, serif; font-style: italic; color: rgba(255, 255, 255, 0.5); font-size: 1rem; margin-bottom: 1.5rem; }
+        .footer-copy { color: rgba(255, 255, 255, 0.3); font-size: 0.85rem; }
+        @media (max-width: 900px) { .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #1C2A4A; flex-direction: column; padding: 2rem; gap: 1.5rem; } .nav-links.active { display: flex; } .mobile-menu { display: flex; } }
+    </style>
+    <style>
+    <style>
+        .donate-intro {
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .donate-intro .verse {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--navy);
+            max-width: 700px;
+            margin: 0 auto 1rem;
+            line-height: 1.8;
+        }
+
+        .donate-intro .verse cite {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            color: var(--gold);
+            font-style: normal;
+        }
+
+        .donate-intro p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 2rem auto 0;
+            line-height: 1.8;
+        }
+
+        /* Vision Section */
+        .vision-section {
+            background: var(--navy);
+            color: white;
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .vision-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2.5rem;
+        }
+
+        .vision-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold-light);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .vision-card p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Impact Section */
+        .impact-section {
+            background: var(--cream-dark);
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .impact-item {
+            text-align: center;
+        }
+
+        .impact-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Give Section */
+        .give-section {
+            background: var(--cream);
+        }
+
+        .give-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .give-text h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .give-text p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .give-methods {
+            margin-top: 2rem;
+        }
+
+        .give-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: var(--cream-dark);
+            border-left: 3px solid var(--gold);
+        }
+
+        .give-method-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .give-method-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--gold-light);
+        }
+
+        .give-method h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--navy);
+            margin-bottom: 0.25rem;
+        }
+
+        .give-method p {
+            font-size: 0.95rem;
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        .qr-section {
+            text-align: center;
+        }
+
+        .qr-wrapper {
+            background: white;
+            padding: 3rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            display: inline-block;
+        }
+
+        .qr-wrapper img {
+            width: 220px;
+            height: 220px;
+        }
+
+        .qr-label {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        .qr-sublabel {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Thank You Section */
+        .thankyou-section {
+            background: linear-gradient(135deg, var(--burgundy) 0%, var(--navy) 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .thankyou-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .thankyou-section p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 900px) {
+            .give-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .qr-section {
+                order: -1;
+            }
+
+            .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="lion-logo.png" alt="Eagle Rock Ministries" class="logo-img">
+                <div class="logo-text">Eagle Rock Ministries</div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="impact.html">How We Impact</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="donate.html" class="active">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Partner With <span>Our Ministry</span></h1>
+        <p>Your generosity helps us build up and prepare the way of the Lord</p>
+    </header>
+
+    <!-- Donate Intro -->
+    <section class="donate-intro">
+        <div class="section-container">
+            <p class="verse">
+                "Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap."
+                <cite>— Luke 6:38</cite>
+            </p>
+            <p>Your generous donations help us continue our intercession ministry across the 8 counties of Kansas, the USA, and globally. Every gift, no matter the size, makes a difference in building up and preparing the way for God's people—helping them become free and powerful in Christ.</p>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision-section">
+        <div class="section-container">
+            <div class="section-header">
+                <p class="section-label" style="color: var(--gold-light);">Our Vision</p>
+                <h2 class="section-title" style="color: white;">Where Your Giving Goes</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="vision-grid">
+                <div class="vision-card">
+                    <h4>Local Intercession Ministry</h4>
+                    <p>Supporting prayer and intercession work across 8 counties in Kansas, bringing spiritual awakening and transformation to our communities.</p>
+                </div>
+                <div class="vision-card">
+                    <h4>Traveling Ministry</h4>
+                    <p>Enabling Pastor Brendt and Kim to travel across the USA and internationally to speak, teach, and minister at churches and conferences.</p>
+                </div>
+                <div class="vision-card">
+                    <h4>International Missions</h4>
+                    <p>Supporting ministry trips abroad, including ongoing work in Belize and future international intercession and teaching assignments.</p>
+                </div>
+                <div class="vision-card">
+                    <h4>Future Rehab Facility</h4>
+                    <p>Building toward our vision of establishing a faith-based rehabilitation facility in Coffeyville, Kansas to help those struggling with addiction find freedom in Christ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <p class="section-label">Your Impact</p>
+                <h2 class="section-title">Ministry by the Numbers</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-number">37+</div>
+                    <div class="impact-label">Years of Ministry</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">8</div>
+                    <div class="impact-label">Kansas Counties</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">20+</div>
+                    <div class="impact-label">Years at Eagle Rock</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">∞</div>
+                    <div class="impact-label">Lives Touched</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Give Section -->
+    <section class="give-section">
+        <div class="section-container">
+            <div class="give-content">
+                <div class="give-text">
+                    <h3>Ways to Give</h3>
+                    <p>We are grateful for your partnership in this ministry. There are several ways you can support the work God is doing through Eagle Rock Ministries.</p>
+                    
+                    <div class="give-methods">
+                        <div class="give-method">
+                            <div class="give-method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="5" width="20" height="14" rx="2"/>
+                                    <line x1="2" y1="10" x2="22" y2="10"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5>Give Online</h5>
+                                <p>Scan the QR code to give securely online through our giving platform.</p>
+                            </div>
+                        </div>
+                        <div class="give-method">
+                            <div class="give-method-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5>Give by Mail</h5>
+                                <p>Eagle Rock Ministries<br>2203 CR 4550<br>Coffeyville, Kansas 67337</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="qr-section">
+                    <div class="qr-wrapper">
+                        <img src="qr-code.png" alt="Scan to donate to Eagle Rock Ministries">
+                        <p class="qr-label">To Support Us</p>
+                        <p class="qr-sublabel">Scan with your phone camera</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section class="thankyou-section">
+        <div class="section-container">
+            <h2>Thank You</h2>
+            <p>Your partnership means the world to us. Together, we are building up and preparing the way of the Lord across Kansas, the USA, and globally. May God bless you abundantly for your generosity.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Eagle Rock Ministries</div>
+            <p class="footer-verse">"Build up, build up, prepare the way of the Lord..." — Isaiah 57:14</p>
+            <p class="footer-copy">© 2024 Eagle Rock Ministries. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+        mobileMenu.addEventListener('click', () => navLinks.classList.toggle('active'));
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('active'));
+        });
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>
