@@ -75,17 +75,17 @@ const SITE_CONTENT = {
             { 
                 title: "One on One", 
                 description: "Personal ministry and discipleship",
-                image: "ministry-youth.jpg"
+                image: "ministry-prayer1.jpg"
             },
             { 
                 title: "Spirit", 
                 description: "Through worship and mentoring",
-                image: "ministry-belize2.jpg"
+                image: "ministry-prayer2.jpg"
             },
             { 
                 title: "Truth", 
                 description: "Through teaching and study",
-                image: "ministry-belize3.jpg"
+                image: "ministry-home.jpg"
             }
         ],
         
