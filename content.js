@@ -12,12 +12,40 @@ const SITE_CONTENT = {
     tagline: "Eagle Rock Ministries",
     phone: "620-870-8801",
     email: "eaglerockministries@gmail.com",
-    website: "eaglerockministries.com",
+    website: "brendtwills.org",
     address: {
         street: "2203 CR 4550",
         city: "Coffeyville",
         state: "Kansas",
         zip: "67337"
+    },
+    
+    // Social Media Links
+    social: {
+        youtube: "https://www.youtube.com/@BrendtWills",
+        facebook: "https://www.facebook.com/EagleRockMinistries/",
+        instagram: "https://www.instagram.com/eagle_rock_ministries"
+    },
+    
+    // Donation Links
+    donations: {
+        paypal: {
+            name: "PayPal",
+            url: "https://www.paypal.com/paypalme/freeandpowerful5714",
+            icon: "paypal"
+        },
+        cashapp: {
+            name: "Cash App",
+            handle: "$BrendtWills",
+            url: "https://cash.app/$BrendtWills",
+            icon: "cashapp"
+        },
+        venmo: {
+            name: "Venmo",
+            handle: "@kimberly-wills-10",
+            url: "https://account.venmo.com/u/kimberly-wills-10",
+            icon: "venmo"
+        }
     },
     
     // Footer
@@ -37,17 +65,41 @@ const SITE_CONTENT = {
         aboutText: [
             'Brendt and Kim Wills have been involved in many aspects of ministry since <span class="highlight">1988</span>. They have served as pastors, youth pastors, in children\'s ministry, street ministry, and prayer counseling.',
             'The Wills have pastored <span class="highlight">Eagle Rock Ministries</span> in Coffeyville, Kansas since 2005. They have ministered in churches, home fellowships, small groups, prisons, parks, streets, and reservations.',
-            'Today, Pastor Brendt oversees intercession ministry across <span class="highlight">8 counties in Kansas</span>, dedicated to prayer and spiritual awakening throughout the region.',
+            'Today, Pastor Brendt oversees intercession ministry across <span class="highlight">9 counties in Kansas</span>, dedicated to prayer and spiritual awakening throughout the region.',
             'Isaiah 57:14 has been a life Scripture for Brendt and Kim—a calling to build up, prepare the way of the Lord, and remove every obstacle from the path of God\'s people.'
         ],
         familyNote: "Brendt and Kim, high school sweethearts, were married in 1986. They have one son, two daughters, six amazing and highly favored grandchildren, and one slightly spoiled Chihuahua.",
         
         // Ministry Approach
         approach: [
-            { title: "One on One", description: "Personal ministry and discipleship" },
-            { title: "Spirit", description: "Through worship and mentoring" },
-            { title: "Truth", description: "Through teaching and study" }
+            { 
+                title: "One on One", 
+                description: "Personal ministry and discipleship",
+                image: "ministry-youth.jpg"
+            },
+            { 
+                title: "Spirit", 
+                description: "Through worship and mentoring",
+                image: "ministry-belize2.jpg"
+            },
+            { 
+                title: "Truth", 
+                description: "Through teaching and study",
+                image: "ministry-belize3.jpg"
+            }
         ],
+        
+        // Donate CTA Section (new section on home page)
+        donateCta: {
+            title: "Partner With Our Ministry",
+            subtitle: "Your generosity helps us continue building up and preparing the way of the Lord across Kansas and beyond.",
+            methods: [
+                { name: "PayPal", icon: "paypal" },
+                { name: "Cash App", icon: "cashapp" },
+                { name: "Venmo", icon: "venmo" },
+                { name: "Check", icon: "mail" }
+            ]
+        },
         
         scriptureVerse: '"Stand by the ways and see and ask for the ancient paths, Where the good way is, and walk in it; Then you will find a resting place for your souls."',
         scriptureRef: "— Jeremiah 6:16a"
@@ -62,7 +114,7 @@ const SITE_CONTENT = {
         
         stats: [
             { number: "37+", label: "Years of Ministry" },
-            { number: "8", label: "Kansas Counties" },
+            { number: "9", label: "Kansas Counties" },
             { number: "20+", label: "Years at Eagle Rock" }
         ],
         
@@ -155,13 +207,25 @@ const SITE_CONTENT = {
         giveTitle: "Your Generosity Makes a Difference",
         giveVerse: '"Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap."',
         giveVerseRef: "— Luke 6:38",
-        giveText: "Your generous donations help us continue our intercession ministry across the 8 counties of Kansas, the USA, and globally. Every gift makes a difference in building up and preparing the way for God's people.",
+        giveText: "Your generous donations help us continue our intercession ministry across the 9 counties of Kansas, the USA, and globally. Every gift makes a difference in building up and preparing the way for God's people.",
+        
+        // Online giving options
+        onlineGiving: {
+            title: "Give Online",
+            subtitle: "Choose your preferred method"
+        },
+        
+        // Mail option
+        mailGiving: {
+            title: "Give by Mail",
+            description: "Make checks payable to Eagle Rock Ministries and mail to:"
+        },
         
         // Where giving goes
         visionAreas: [
             {
                 title: "Local Intercession Ministry",
-                description: "Supporting prayer and intercession work across 8 counties in Kansas, bringing spiritual awakening to our communities."
+                description: "Supporting prayer and intercession work across 9 counties in Kansas, bringing spiritual awakening to our communities."
             },
             {
                 title: "Traveling & International Ministry", 
