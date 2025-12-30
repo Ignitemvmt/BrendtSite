@@ -32,10 +32,15 @@
         .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(184, 134, 11, 0.4); }
         .btn-outline { background: transparent; border: 2px solid var(--gold); color: var(--gold); box-shadow: none; }
         .btn-outline:hover { background: var(--gold); color: white; }
-        footer { background: #141E33; padding: 2rem; text-align: center; }
+        footer { background: #141E33; padding: 3rem 2rem 2rem; text-align: center; }
         .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--gold-light); margin-bottom: 1rem; }
         .footer-verse { font-family: 'Cormorant Garamond', serif; font-style: italic; color: rgba(255, 255, 255, 0.5); font-size: 1rem; margin-bottom: 1.5rem; }
         .footer-copy { color: rgba(255, 255, 255, 0.3); font-size: 0.85rem; }
+        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+        .social-links a { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 50%; transition: all 0.3s ease; }
+        .social-links a:hover { background: var(--gold); border-color: var(--gold); }
+        .social-links svg { width: 20px; height: 20px; fill: rgba(255,255,255,0.7); }
+        .social-links a:hover svg { fill: white; }
         @media (max-width: 900px) {
             .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--navy); flex-direction: column; padding: 2rem; gap: 1.5rem; }
             .nav-links.active { display: flex; }
@@ -64,16 +69,30 @@
         .family-note { background: var(--cream-dark); padding: 1.5rem; border-left: 3px solid var(--gold); margin-top: 2rem; font-style: italic; color: var(--text-light); }
         .approach-section { background: var(--navy); color: white; }
         .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
-        .approach-card { text-align: center; padding: 2.5rem 2rem; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease; }
+        .approach-card { text-align: center; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease; overflow: hidden; }
         .approach-card:hover { background: rgba(255, 255, 255, 0.06); transform: translateY(-5px); }
-        .approach-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; }
-        .approach-icon svg { width: 28px; height: 28px; stroke: white; }
-        .approach-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; color: var(--gold-light); margin-bottom: 0.75rem; }
+        .approach-card img { width: 100%; height: 200px; object-fit: cover; }
+        .approach-card-content { padding: 1.5rem; }
+        .approach-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; color: var(--gold-light); margin-bottom: 0.5rem; }
         .approach-card p { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
         .scripture-section { background: var(--cream-dark); text-align: center; padding: 5rem 2rem; }
         .scripture-box { max-width: 800px; margin: 0 auto; }
         .scripture-box blockquote { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-style: italic; color: var(--navy); line-height: 1.8; margin-bottom: 1rem; }
         .scripture-box cite { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--gold); font-style: normal; }
+        
+        /* Donate CTA Section */
+        .donate-cta-section { background: var(--cream); }
+        .donate-cta-content { text-align: center; }
+        .donate-cta-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 500; color: var(--navy); margin-bottom: 1rem; }
+        .donate-cta-content > p { color: var(--text-light); font-size: 1.1rem; margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .donate-methods { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .donate-method { background: white; padding: 2rem 1.5rem; border: 1px solid rgba(184, 134, 11, 0.15); text-align: center; transition: all 0.3s ease; text-decoration: none; color: var(--text); }
+        .donate-method:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); border-color: var(--gold); }
+        .donate-method-icon { width: 50px; height: 50px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; background: var(--cream-dark); border-radius: 50%; }
+        .donate-method-icon svg { width: 24px; height: 24px; }
+        .donate-method h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--navy); margin-bottom: 0.25rem; }
+        .donate-method p { font-size: 0.85rem; color: var(--text-light); }
+        
         .cta-section { background: linear-gradient(135deg, var(--burgundy) 0%, var(--navy) 100%); text-align: center; padding: 5rem 2rem; }
         .cta-section h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 500; color: white; margin-bottom: 1rem; }
         .cta-section p { color: rgba(255, 255, 255, 0.8); font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -84,6 +103,10 @@
             .about-content { grid-template-columns: 1fr; gap: 3rem; }
             .about-image-wrapper { max-width: 400px; margin: 0 auto; }
             .approach-grid { grid-template-columns: 1fr; }
+            .donate-methods { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 500px) {
+            .donate-methods { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -154,6 +177,17 @@
         </div>
     </section>
 
+    <section class="donate-cta-section">
+        <div class="section-container">
+            <div class="donate-cta-content">
+                <h2 id="donate-cta-title">Partner With Our Ministry</h2>
+                <p id="donate-cta-subtitle">Your generosity helps us continue building up and preparing the way of the Lord across Kansas and beyond.</p>
+                <div class="donate-methods" id="donate-methods"></div>
+                <a href="donate.html" class="btn">Learn More About Giving</a>
+            </div>
+        </div>
+    </section>
+
     <section class="scripture-section">
         <div class="scripture-box">
             <blockquote id="scripture-verse"></blockquote>
@@ -162,17 +196,18 @@
     </section>
 
     <section class="cta-section">
-        <h2>Partner With Us</h2>
+        <h2>Connect With Us</h2>
         <p>Join us in building up and preparing the way of the Lord across Kansas, the USA, and globally.</p>
         <div class="cta-buttons">
-            <a href="donate.html" class="btn">Support Our Ministry</a>
-            <a href="contact.html" class="btn btn-outline">Invite Us to Speak</a>
+            <a href="contact.html" class="btn">Invite Us to Speak</a>
+            <a href="books.html" class="btn btn-outline">View Our Books</a>
         </div>
     </section>
 
     <footer>
         <div class="footer-content">
             <div class="footer-logo" id="footer-site-name">Eagle Rock Ministries</div>
+            <div class="social-links" id="social-links"></div>
             <p class="footer-verse" id="footer-verse"></p>
             <p class="footer-copy" id="footer-copy"></p>
         </div>
@@ -196,6 +231,20 @@
             document.getElementById('footer-verse').textContent = C.footerVerse;
             document.getElementById('footer-copy').textContent = C.copyright;
 
+            // Social links
+            const socialHTML = `
+                <a href="${C.social.facebook}" target="_blank" title="Facebook">
+                    <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="${C.social.instagram}" target="_blank" title="Instagram">
+                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="${C.social.youtube}" target="_blank" title="YouTube">
+                    <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                </a>
+            `;
+            document.getElementById('social-links').innerHTML = socialHTML;
+
             // Hero
             document.getElementById('hero-tagline').textContent = C.tagline;
             document.getElementById('hero-title').innerHTML = C.home.heroTitle;
@@ -208,20 +257,53 @@
             document.getElementById('about-paragraphs').innerHTML = aboutParagraphs;
             document.getElementById('family-note').textContent = C.home.familyNote;
 
-            // Approach
-            const icons = [
-                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
-                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>',
-                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>'
-            ];
-            const approachHTML = C.home.approach.map((item, i) => `
+            // Approach with images
+            const approachHTML = C.home.approach.map(item => `
                 <div class="approach-card">
-                    <div class="approach-icon">${icons[i]}</div>
-                    <h4>${item.title}</h4>
-                    <p>${item.description}</p>
+                    <img src="${item.image}" alt="${item.title}">
+                    <div class="approach-card-content">
+                        <h4>${item.title}</h4>
+                        <p>${item.description}</p>
+                    </div>
                 </div>
             `).join('');
             document.getElementById('approach-grid').innerHTML = approachHTML;
+
+            // Donate CTA
+            document.getElementById('donate-cta-title').textContent = C.home.donateCta.title;
+            document.getElementById('donate-cta-subtitle').textContent = C.home.donateCta.subtitle;
+            
+            const donateMethodsHTML = `
+                <a href="${C.donations.paypal.url}" target="_blank" class="donate-method">
+                    <div class="donate-method-icon">
+                        <svg viewBox="0 0 24 24" fill="#003087"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106z"/></svg>
+                    </div>
+                    <h4>PayPal</h4>
+                    <p>Quick & secure</p>
+                </a>
+                <a href="${C.donations.cashapp.url}" target="_blank" class="donate-method">
+                    <div class="donate-method-icon">
+                        <svg viewBox="0 0 24 24" fill="#00D632"><path d="M23.59 3.47A5.1 5.1 0 0 0 20.53.41C19.2.01 17.62 0 15.04 0H8.96C6.39 0 4.8.01 3.47.41A5.1 5.1 0 0 0 .41 3.47C.01 4.8 0 6.38 0 8.96v6.08c0 2.57.01 4.16.41 5.49a5.1 5.1 0 0 0 3.06 3.06c1.33.4 2.91.41 5.49.41h6.08c2.57 0 4.16-.01 5.49-.41a5.1 5.1 0 0 0 3.06-3.06c.4-1.33.41-2.91.41-5.49V8.96c0-2.58-.01-4.16-.41-5.49zM17.42 12.03l-.93.93a.5.5 0 0 1-.67.01 5.02 5.02 0 0 0-3.22-1.18c-.97 0-1.94.32-1.94 1.21 0 .9 1.04 1.2 2.24 1.65 2.1.7 3.84 1.58 3.84 3.64 0 2.24-1.74 3.78-4.58 3.95l-.26 1.2a.49.49 0 0 1-.48.39H9.63l-.09-.01a.5.5 0 0 1-.38-.59l.28-1.27a6.54 6.54 0 0 1-2.88-1.57v-.01a.48.48 0 0 1 0-.68l1-.97a.49.49 0 0 1 .67 0c.91.86 2.13 1.34 3.39 1.32 1.3 0 2.17-.55 2.17-1.42 0-.87-.88-1.1-2.54-1.72-1.76-.63-3.43-1.52-3.43-3.6 0-2.42 2.01-3.6 4.39-3.71l.25-1.23a.48.48 0 0 1 .48-.38h1.78l.1.01c.26.06.43.31.37.57l-.27 1.37c.9.3 1.75.77 2.48 1.39l.02.02c.19.18.2.5.02.7z"/></svg>
+                    </div>
+                    <h4>Cash App</h4>
+                    <p>${C.donations.cashapp.handle}</p>
+                </a>
+                <a href="${C.donations.venmo.url}" target="_blank" class="donate-method">
+                    <div class="donate-method-icon">
+                        <svg viewBox="0 0 24 24" fill="#008CFF"><path d="M19.27 2c.88 1.39 1.29 2.83 1.29 4.65 0 5.8-4.94 13.32-8.96 18.6H4.43L1 3.13l6.73-.61 1.85 14.89c1.72-2.8 3.85-7.2 3.85-10.2 0-1.73-.3-2.91-.74-3.87L19.27 2z"/></svg>
+                    </div>
+                    <h4>Venmo</h4>
+                    <p>${C.donations.venmo.handle}</p>
+                </a>
+                <a href="donate.html#mail" class="donate-method">
+                    <div class="donate-method-icon">
+                        <svg viewBox="0 0 24 24" fill="#1C2A4A"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6" fill="none" stroke="#D4A84B" stroke-width="2"/></svg>
+                    </div>
+                    <h4>Mail a Check</h4>
+                    <p>Send by mail</p>
+                </a>
+            `;
+            document.getElementById('donate-methods').innerHTML = donateMethodsHTML;
 
             // Scripture
             document.getElementById('scripture-verse').textContent = C.home.scriptureVerse;
